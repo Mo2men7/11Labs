@@ -1,3 +1,19 @@
+import { OrganizationList } from "@clerk/nextjs";
+
 export default function OrganizationSelectionPage() {
-  return <div>OrganizationSelectionPage</div>;
+  return (
+    <div className="flex min-h-screen items-center justify-center">
+      <OrganizationList
+        hidePersonal
+        afterCreateOrganizationUrl="/"
+        afterSelectOrganizationUrl="/"
+        appearance={{
+          elements: {
+            rootBox: "mx-auto",
+            card: "shadow-lg",
+          },
+        }}
+      />
+    </div>
+  );
 }
